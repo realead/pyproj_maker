@@ -129,6 +129,14 @@ run_unittests_content = """
 write_content(run_unittests_file, run_unittests_content)
 
 
+test_active_file = os.path.join(tests_folder, 'test_in_active_env.sh')
+test_active_content = """
+pip install -e ../.
+sh run_unit_tests.sh 
+"""
+write_content(test_active_file, test_active_content)
+
+
 ##unit tests
 unittests_folder = os.path.join(tests_folder, 'unit_tests')
 pathlib.Path(unittests_folder).mkdir(parents=True, exist_ok=True)
