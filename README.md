@@ -18,6 +18,15 @@ Call `sh test_install.sh from-github` to check the installation from github.
 Call `sh test_install.sh local keep` to keep the virtual environment after the run.
 
 A less costly alternative is to use `test_in_active_env.sh` which installs the library in developer-mode in the active environment and runs unit tests.
+
+### Adjustments
+
+It is possible to add further files to the created project by adding files to `_TEMPLATE` folder.
+
+The string `__NAME__` will be replaced by the lib_name (i.e. name passed via argument `--name`). Only text file are possible. On the content of these files `.format(name=lib_name)` is applied. That means
+
+   * "my name is {name}" becomes "my name is XXX" if XXX is the given name
+   * "my name is {{name}} becomes "my name is {name}"
 `
 
 ## Requirements:
