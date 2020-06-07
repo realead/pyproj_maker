@@ -11,9 +11,13 @@ to check the result:
 
     (cd <path/to/lib>/<lib_name>/tests && sh test_install.sh)
 
-in this case a new virtual environment is created, the needed libraries are installed and the created library is build/installed. Also unit tests are run. The environment is deleted afterwards.
+in this case a new virtual environment is created, the needed libraries are installed and the created library is built/installed. Also unit tests are run. The environment is deleted afterwards.
 
 Call `sh test_install.sh from-github` to check the installation from github.
+
+Call `sh test_install.sh from-test-pypi` to check the installation from  test pypi
+
+Call `sh test_install.sh from-pypi` to check the installation from pypi
 
 Call `sh test_install.sh local keep` to keep the virtual environment after the run.
 
